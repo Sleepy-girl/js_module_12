@@ -31,8 +31,7 @@ import { createMarkUp } from "./markup";
 
 let debounce = require("lodash.debounce");
 
-const getCountry = (event) => {
-  fetchCountries(event.target.value).then(createMarkUp);
+const getCountry = (e) => {
+  fetchCountries(e.target.value).then(createMarkUp);
 };
-
 refs.country.addEventListener("input", debounce(getCountry, 500));
